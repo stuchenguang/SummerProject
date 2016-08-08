@@ -1,0 +1,71 @@
+<div ng-controller='AreaExpenseCtrl'  id="area_data_list">
+<!-- AVG of different properties in different areas -->
+<table class="table table-striped" id="area_data">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Data</th>
+    </tr>  
+  </thead>
+  <tbody>
+    <tr>
+      <td>Area&nbsp;<span class="glyphicon glyphicon-question-sign" id="question_icon" data-toggle="tooltip" data-placement="right" title="Area refers to a city or a province. All the following expenses are about this area."></span></td>
+      <td style="color:#b30000;"><b>{{ groupExpenses[area][0].area }}</b></td>
+    </tr>
+    <tr>
+      <td>Food&nbsp;<span class="glyphicon glyphicon-question-sign" id="question_icon" data-toggle="tooltip" data-placement="right" title="Expenses for food every month."></span></td>  
+      <td>{{ groupExpenses[area].foodAvg }} ¥</td>
+    </tr>
+    <tr>
+      <td>Housing(rent)&nbsp;<span class="glyphicon glyphicon-question-sign" id="question_icon" data-toggle="tooltip" data-placement="right" title="Expenses for renting houses(per month) in this area."></span></td>
+      <td>{{ groupExpenses[area].housingAvg }} ¥</td>
+    </tr>
+    <tr>
+      <td>Transportation(Gas)&nbsp;<span class="glyphicon glyphicon-question-sign" id="question_icon"  data-toggle="tooltip" data-placement="right" title="Expenses for gas transportation every month. Gas here are used for private cars(usually)."></span></td>  
+      <td>{{ groupExpenses[area].gasAvg }} ¥</td>
+    </tr>
+    <tr>
+      <td>Transportation(Public transportation)&nbsp;<span class="glyphicon glyphicon-question-sign" id="question_icon"  data-toggle="tooltip" data-placement="right" title="Expenses for public transportation every month, mainly including taking buses, subways."></span></td>  
+      <td>{{ groupExpenses[area].public_transportationAvg }} ¥</td>
+    </tr>
+    <tr>
+      <td>Shopping(Essential)&nbsp;<span class="glyphicon glyphicon-question-sign" id="question_icon"  data-toggle="tooltip" data-placement="right" title="Expenses for buying essential every month, such as toilet paper."></span></td>  
+      <td>{{ groupExpenses[area].essentialAvg }} ¥</td>
+    </tr>
+    <tr>
+      <td>Shopping(Clothes)&nbsp;<span class="glyphicon glyphicon-question-sign" id="question_icon"  data-toggle="tooltip" data-placement="right" title="Expenses for buying clothes every month."></span></td>  
+      <td>{{ groupExpenses[area].clothesAvg }} ¥</td>
+    </tr>
+    <tr>
+      <td>Shopping(Other things)&nbsp;<span class="glyphicon glyphicon-question-sign" id="question_icon"  data-toggle="tooltip" data-placement="right" title="Expenses for buying stuff except essential and clothes every month."></span></td>  
+      <td>{{ groupExpenses[area].other_thingsAvg }} ¥</td>
+    </tr>
+    <tr>
+      <td>Entertainment&nbsp;<span class="glyphicon glyphicon-question-sign" id="question_icon"  data-toggle="tooltip" data-placement="right" title="Expenses for entertainment every month, such as going to KTV."></span></td>  
+      <td>{{ groupExpenses[area].entertainmentAvg }} ¥</td>
+    </tr>
+    <tr>
+      <td>Medical care&nbsp;<span class="glyphicon glyphicon-question-sign" id="question_icon"  data-toggle="tooltip" data-placement="right" title="Expenses for medical care every month, such as buying medicine, going to hospital."></span></td>  
+      <td>{{ groupExpenses[area].medicalAvg }} ¥</td>
+    </tr>
+    <tr>
+      <td>Others&nbsp;<span class="glyphicon glyphicon-question-sign" id="question_icon"  data-toggle="tooltip" data-placement="right" title="Expenses for others every month, such as phone bill, electricity bill, water bill."></span></td>  
+      <td>{{ groupExpenses[area].othersAvg }} ¥</td>
+    </tr>
+    <tr>
+      <td>Total&nbsp;<span class="glyphicon glyphicon-question-sign" id="question_icon"  data-toggle="tooltip" data-placement="right" title="Total expenses every month."></span></td>        
+      <td>{{ groupExpenses[area].totalAvg }} ¥</td>
+    </tr>
+    <tr>
+      <td>Basic expenses percentage&nbsp;<span class="glyphicon glyphicon-question-sign" id="question_icon"  data-toggle="tooltip" data-placement="right" title="Expenses for food, expenses for housing, expenses for public transportation, expenses for buying essential are regarded as four type basic expenses. So the basic expenses percentage equals to basic expenses/ total expenses."></span></td>  
+      <td>{{ groupExpenses[area].percentageAvg }} %</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+
+
+

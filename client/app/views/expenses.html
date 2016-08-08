@@ -1,0 +1,95 @@
+<div ng-controller="ExpenseAddCtrl">
+  <div class="alert alert-info" ng-show="flash.getMessage()">
+    <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <p>{{flash.getMessage()}}</p>
+  </div>
+</div>
+
+<div ng-controller='ExpensesCtrl'>
+
+  <p ng-repeat="expense in expenses |  orderBy: 'area' | filter:query as results"></p>
+  <div class="row" style="margin-top: 40px;">
+      <div class="jumbotron" style="background-color:rgba(255,255,255,0.8);">
+        <h1>CrowdLEC</h1>
+        <p class="lead">
+          <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+          <b>{{ results.length }}</b> living expenses records have been provided!
+        </p>
+        <hr>
+        <p><a class="btn btn-lg btn-primary" ng-href="#/add/expense">Add your living expenses &nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span></a></p>
+      </div>
+  </div>  
+
+  <div class="row" id="area_and_ranking">
+    <ng-include src="'views/area-nav.html'"></ng-include>
+    <div class="col-md-9" id="ranking" style="padding-left: 20px; background-color: #f2f2f2;">
+      <h3>Ranking</h3>
+      <table class="table table-striped" id="ranking_table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Area</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="element in sorted_totalAry ">
+            <td>{{$index + 1}}.</td>
+            <td>{{ element.key }}</td>
+            <td>{{ element.val }} ¥</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>  
+  </div>
+
+
+
+<!-- <table class="table table-striped">
+  <thead>
+    <th>Area</th>
+    <th>food</th>
+    <th>housing</th>
+    <th>transportation_gas</th>
+    <th>transportation_public</th>
+    <th>shopping_essential</th>
+    <th>shopping_clothes</th>
+    <th>shopping_other_things</th>
+    <th>entertainment</th>
+    <th>medical_care</th>
+    <th>others</th>
+    <th>total</th>
+    <th>basic_expenses_percentage</th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="expense in expenses |  orderBy: 'area' | filter:query as results">
+      <td>{{ expense.area }}</td>
+      <td>{{ expense.food }}</td>
+      <td>{{ expense.housing }}</td>
+      <td>{{ expense.transportation.gas }}</td>
+      <td>{{ expense.transportation.public_transportation }}</td>
+      <td>{{ expense.shopping.essential }}</td>
+      <td>{{ expense.shopping.clothes }}</td>
+      <td>{{ expense.shopping.other_things }}</td>
+      <td>{{ expense.entertainment }}</td>
+      <td>{{ expense.medical_care }}</td>
+      <td>{{ expense.others }}</td>
+      <td>{{ expense.total }}</td>
+      <td>{{ expense.basic_expenses_percentage }} %</td>
+    </tr>
+  </tbody>
+</table> -->
+  
+  
+
+
+  <div id="mapchart"></div>
+  <div id="columnchart"></div>
+  <div id="linechart"></div>
+  <div id="columndrilldown"></div>
+
+
+</div>
+
+
+

@@ -1,0 +1,14 @@
+#area_data {
+	margin-top: 20px;
+    background-color: #f2f2f2;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);  
+}
+
+#area_data thead tr th {
+	text-align: center;
+}
+
+#area_data tbody tr td {
+	text-align: center;
+}
