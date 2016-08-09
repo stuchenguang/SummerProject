@@ -11,10 +11,12 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.scss">
     <link rel="stylesheet" href="styles/expenses.css">
     <link rel="stylesheet" href="styles/expense-add.css">
     <link rel="stylesheet" href="styles/area_expense.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"> -->
     <!-- endbuild -->
 
     <!-- facebook og -->
@@ -34,7 +36,7 @@
     <!-- Add your site or application content here -->
     <!-- <div class="header"> -->
       <div class="navbar navbar-inverse" role="navigation" >
-        <div class="container">
+        <div class="col-md-offset-2 col-md-8">
           <div class="navbar-header">
 
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
@@ -79,9 +81,11 @@
 
     <div style="background-image: url('images/shanghai.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-position: center; ">
     <!-- <div> -->
-      <div class="container" style="margin-top: -20px;">
+    <div class="row" style="margin-top: -20px;">
+      <div class="col-md-offset-2 col-md-8">
         <div ng-view=""></div>
       </div>
+    </div>
     </div>
 
     <div class="footer">

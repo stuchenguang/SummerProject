@@ -40,14 +40,14 @@
 
   <div class="form-group">
     <label for="food" class="control-label"><span class="glyphicon glyphicon-apple">&nbsp;</span>Food&nbsp;<span class="glyphicon glyphicon-question-sign" id="question_icon" data-toggle="tooltip" data-placement="right" title="You should input your expenses for food every month."></span></label>
-    <input type="text" ng-model="expense.food" class="form-control" id="food" name="food" placeholder="Enter the food expenses" required>
+    <input style="width:570px;" type="text" ng-model="expense.food" class="form-control" id="food" name="food" placeholder="Enter the food expenses" required>
     <p style="color:#b30000;" ng-show="expenseForm.food.$invalid && !expenseForm.food.$pristine" class="help-block"><b>Food is required!</b></p>
   </div>
 
 
   <div class="form-group">
     <label for="housing" class="control-label"><span class="glyphicon glyphicon-home">&nbsp;</span>Housing(Rent)&nbsp;<span class="glyphicon glyphicon-question-sign" id="question_icon" data-toggle="tooltip" data-placement="right" title="You should input the expenses for renting houses(per month) in your area."></span></label>
-    <input type="text" ng-model="expense.housing" class="form-control" id="housing" name="housing" placeholder="Enter the house renting expenses" required>
+    <input style="width:570px;" type="text" ng-model="expense.housing" class="form-control" id="housing" name="housing" placeholder="Enter the house renting expenses" required>
     <p style="color:#b30000;" ng-show="expenseForm.housing.$invalid && !expenseForm.housing.$pristine" class="help-block"><b>Housing is required!</b></p>     
   </div>
 
@@ -57,12 +57,12 @@
   <div class="form-subgroup">
     
     <label for="gas" class="control-sublabel">Gas</label>
-    <input type="text" ng-model="expense.transportation.gas" class="form-control" id="gas" name="gas" placeholder="Enter the gas expenses for your private cars" required>
+    <input style="width:570px;" type="text" ng-model="expense.transportation.gas" class="form-control" id="gas" name="gas" placeholder="Enter the gas expenses for your private cars" required>
     <p style="color:#b30000;" ng-show="expenseForm.gas.$invalid && !expenseForm.gas.$pristine" class="help-block"><b>Gas is required!</b></p>
     <br>     
     
     <label for="public_transportation" class="control-sublabel">Public Transportation</label>
-    <input type="text" ng-model="expense.transportation.public_transportation" class="form-control" id="public_transportation" name="public_transportation" placeholder="Enter the public transportation expenses" required>
+    <input style="width:570px;" type="text" ng-model="expense.transportation.public_transportation" class="form-control" id="public_transportation" name="public_transportation" placeholder="Enter the public transportation expenses" required>
     <p style="color:#b30000;" ng-show="expenseForm.public_transportation.$invalid && !expenseForm.public_transportation.$pristine" class="help-block"><b>Public transportation is required!</b></p>        
   </div>
   </div>
@@ -73,17 +73,17 @@
   <div class="form-subgroup">
 
     <label for="essential" class="control-sublabel">Essential</label>
-    <input type="text" ng-model="expense.shopping.essential" class="form-control" id="essential" name="essential" placeholder="Enter the essential expense" required>
+    <input style="width:570px;" type="text" ng-model="expense.shopping.essential" class="form-control" id="essential" name="essential" placeholder="Enter the essential expense" required>
     <p style="color:#b30000;" ng-show="expenseForm.essential.$invalid && !expenseForm.essential.$pristine" class="help-block"><b>Essential is required!</b></p>
     <br>   
 
     <label for="other_things" class="control-sublabel">Clothes</label>
-    <input type="text" ng-model="expense.shopping.clothes" class="form-control" id="clothes" name="clothes" placeholder="Enter the expense for clothes" required>
+    <input style="width:570px;" type="text" ng-model="expense.shopping.clothes" class="form-control" id="clothes" name="clothes" placeholder="Enter the expense for clothes" required>
     <p style="color:#b30000;" ng-show="expenseForm.clothes.$invalid && !expenseForm.clothes.$pristine" class="help-block"><b>Clothes is required!</b></p>
     <br>     
 
     <label for="other_things" class="control-sublabel">Other Things</label>
-    <input type="text" ng-model="expense.shopping.other_things" class="form-control" id="other_things" name="other_things" placeholder="Enter the expense for other things" required>
+    <input style="width:570px;" type="text" ng-model="expense.shopping.other_things" class="form-control" id="other_things" name="other_things" placeholder="Enter the expense for other things" required>
     <p style="color:#b30000;" ng-show="expenseForm.other_things.$invalid && !expenseForm.other_things.$pristine" class="help-block"><b>Other things is required!</b></p>
     <br>           
   </div>
@@ -92,21 +92,21 @@
 
   <div class="form-group">
   	<label for="entertainment" class="control-label"><span class="glyphicon glyphicon-glass">&nbsp;</span>Entertainment&nbsp;<span class="glyphicon glyphicon-question-sign" id="question_icon" data-toggle="tooltip" data-placement="right" title="You should input your expenses for entertainment every month, such as expenses for going to KTV."></span></label>
-  	<input type="text" ng-model= "expense.entertainment" class="form-control" id="entertainment" name="entertainment" placeholder="Enter the entertainment expense" required>
+  	<input style="width:570px;" type="text" ng-model= "expense.entertainment" class="form-control" id="entertainment" name="entertainment" placeholder="Enter the entertainment expense" required>
     <p style="color:#b30000;" ng-show="expenseForm.entertainment.$invalid && !expenseForm.entertainment.$pristine" class="help-block"><b>Entertainment is required!</b></p>      
   </div>
 
 
   <div class="form-group">
   	<label for="medical_care" class="control-label"><span class="glyphicon glyphicon-plus-sign">&nbsp;</span>Medical care&nbsp;<span class="glyphicon glyphicon-question-sign" id="question_icon" data-toggle="tooltip" data-placement="right" title="You should input your expenses for medical care every month, including buying medicine and going to hospitals."></span></label>
-  	<input type="text" ng-model= "expense.medical_care" class="form-control" id="medical_care" name="medical_care" placeholder="Enter the expense for medical care" required>
+  	<input style="width:570px;" type="text" ng-model= "expense.medical_care" class="form-control" id="medical_care" name="medical_care" placeholder="Enter the expense for medical care" required>
     <p style="color:#b30000;" ng-show="expenseForm.medical_care.$invalid && !expenseForm.medical_care.$pristine" class="help-block"><b>Medical care is required!</b></p>       
   </div>  
 
 
   <div class="form-group">
   	<label for="others" class="control-label"><span class="glyphicon glyphicon-phone">&nbsp;</span><span class="glyphicon glyphicon-tint">&nbsp;</span><span class="glyphicon glyphicon-flash">&nbsp;</span>Others&nbsp;<span class="glyphicon glyphicon-question-sign" id="question_icon" data-toggle="tooltip" data-placement="right" title="Others here refers to expenses that are not included in the above options, such as phone bill, water bill, electricity bill."></span></label>
-  	<input type="text" ng-model= "expense.others" class="form-control" id="others" name="others" placeholder="Enter the expense for others" required>
+  	<input style="width:570px;" type="text" ng-model= "expense.others" class="form-control" id="others" name="others" placeholder="Enter the expense for others" required>
     <p style="color:#b30000;" ng-show="expenseForm.others.$invalid && !expenseForm.others.$pristine" class="help-block"><b>Others is required!</b></p>       
   </div>
 

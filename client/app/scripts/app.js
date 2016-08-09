@@ -46,7 +46,7 @@ angular
       RestangularConfigurer.setRestangularFields({
         id: '_id'
       });
-      RestangularConfigurer.setBaseUrl('http://localhost:3000');
+      RestangularConfigurer.setBaseUrl('http://crowdslec.herokuapp.com' || 'http://localhost:3000');
     });
   })
   .factory('Expense', function(LivingexpensesRestangular) {
