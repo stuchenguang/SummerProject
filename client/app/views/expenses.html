@@ -16,10 +16,24 @@
           <img src="images/yeoman.png" alt="I'm Yeoman"><br>
           <b>{{ results.length }}</b> living expenses records have been provided!
         </p>
-        <hr>
+        <hr style="width: 50%;">
         <p><a class="btn btn-lg btn-primary" ng-href="#/add/expense">Add your living expenses &nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span></a></p>
+
+        <a href="https://twitter.com/share" class="btn btn-social-icon btn-facebook" style="background-color:#55ACEE; width: 33px;" data-text="Come and check the living expenses ranking of your province/city!&quot;" data-url="http://crowdslec-28096371.netlify.com/#/" data-via="stuartist93" data-hashtags="crowdsourcing" data-show-count="false"><span class="fa fa-twitter fa-lg" style="color:#FFFFFF;"></span></a>&nbsp;&nbsp;<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+        <a class="btn btn-social-icon btn-facebook" style="background-color:#3B5998; width: 33px;" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcrowdslec-28096371.netlify.com%2F%23%2F&amp;src=sdkpreparse"><span class="fa fa-facebook fa-lg" style="color:#FFFFFF; text-align: center;"></span></a>
+
       </div>
-  </div>  
+  </div>
+
+
+
+
+
+    
+
+
 
   <div class="row" id="area_and_ranking">
     <ng-include src="'views/area-nav.html'"></ng-include>
@@ -45,45 +59,6 @@
   </div>
 
 
-
-<!-- <table class="table table-striped">
-  <thead>
-    <th>Area</th>
-    <th>food</th>
-    <th>housing</th>
-    <th>transportation_gas</th>
-    <th>transportation_public</th>
-    <th>shopping_essential</th>
-    <th>shopping_clothes</th>
-    <th>shopping_other_things</th>
-    <th>entertainment</th>
-    <th>medical_care</th>
-    <th>others</th>
-    <th>total</th>
-    <th>basic_expenses_percentage</th>
-  </thead>
-  <tbody>
-    <tr ng-repeat="expense in expenses |  orderBy: 'area' | filter:query as results">
-      <td>{{ expense.area }}</td>
-      <td>{{ expense.food }}</td>
-      <td>{{ expense.housing }}</td>
-      <td>{{ expense.transportation.gas }}</td>
-      <td>{{ expense.transportation.public_transportation }}</td>
-      <td>{{ expense.shopping.essential }}</td>
-      <td>{{ expense.shopping.clothes }}</td>
-      <td>{{ expense.shopping.other_things }}</td>
-      <td>{{ expense.entertainment }}</td>
-      <td>{{ expense.medical_care }}</td>
-      <td>{{ expense.others }}</td>
-      <td>{{ expense.total }}</td>
-      <td>{{ expense.basic_expenses_percentage }} %</td>
-    </tr>
-  </tbody>
-</table> -->
-  
-  
-
-
   <div id="mapchart"></div>
   <div id="columnchart"></div>
   <div id="linechart"></div>
@@ -92,5 +67,8 @@
 
 </div>
 
+
+
+<div id="fb-root"></div>
 
 

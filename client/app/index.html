@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>CrowdSLEC</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -16,15 +16,16 @@
     <link rel="stylesheet" href="styles/expense-add.css">
     <link rel="stylesheet" href="styles/area_expense.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <!-- endbuild -->
 
     <!-- facebook og -->
-<!--     <meta property="og:url"                content="http://localhost:9000/#/" />
+    <meta property="og:url"                content="http://crowdslec-28096371.netlify.com/#/" />
     <meta property="og:type"               content="website" />
-    <meta property="og:title"              content="When Great Minds Don’t Think Alike" />
-    <meta property="og:description"        content="How much does culture influence creative thinking?" />
-    <meta property="og:image"              content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" /> -->
+    <meta property="og:title"              content="CrowdSLEC" />
+    <meta property="og:description"        content="Come and check the living expenses ranking of your province/city!" />
+    <meta property="og:image"              content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
+    <meta property="fb:app_id"             content="1638623889781663" />
     <!-- facebook og over -->
 
   </head>
@@ -63,22 +64,6 @@
 
 
 
-
-<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/zh_CN/sdk.js#xfbml=1&version=v2.7&appId=1638623889781663";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-
-
-<div class="fb-share-button" data-href="http://localhost:9000/#/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A9000%2F%23%2F&amp;src=sdkpreparse">Share</a></div> -->
-
-
-
     <div style="background-image: url('images/shanghai.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-position: center; ">
     <!-- <div> -->
     <div class="row" style="margin-top: -20px;">
@@ -105,6 +90,18 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
+
+    <!-- facebook share popup -->
+    <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=1638623889781663";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->

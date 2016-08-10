@@ -344,18 +344,18 @@ angular.module('clientApp')
 
                 colorAxis: {
                     dataClasses: [{
-                        to: 50
+                        to: 1000
                     }, {
-                        from: 50,
-                        to: 100
+                        from: 1000,
+                        to: 2000
                     }, {
-                        from: 100,
-                        to: 200
+                        from: 2000,
+                        to: 4000
                     }, {
-                        from: 200,
-                        to: 400
+                        from: 4000,
+                        to: 6000
                     }, {
-                        from: 400
+                        from: 6000
                     }]
                 },
 

@@ -37,6 +37,7 @@
 }
 
 #columnchart {
+    height: 500px;
 	background: url(http://www.highcharts.com/samples/graphics/sand.png);
     border-radius: 3px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -45,6 +46,7 @@
 }
 
 #linechart {
+    height: 500px;
 	background: url(http://www.highcharts.com/samples/graphics/sand.png);
     border-radius: 3px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -53,6 +55,7 @@
 }
 
 #columndrilldown {
+    height: 500px;
 	background: url(http://www.highcharts.com/samples/graphics/sand.png);
     border-radius: 3px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);

@@ -59,7 +59,7 @@ app.get('/send',function(req,res){
       }
       return toEmail;
       // console.log(toEmail);
-    };   
+    };
     
 
     var mailOptions={
