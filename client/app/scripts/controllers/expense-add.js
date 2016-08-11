@@ -34,6 +34,7 @@ angular.module('clientApp')
     $scope.sendmail = function () {
     $http({
         url: "http://localhost:3000/send", 
+        // url: "http://crowdslec.herokuapp.com/send",
         method: "GET",
         params: {to: $scope.dataToPost}
       }).success(function(serverResponse) {
