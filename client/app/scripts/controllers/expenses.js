@@ -350,12 +350,12 @@ angular.module('clientApp')
                         to: 2000
                     }, {
                         from: 2000,
-                        to: 4000
+                        to: 3500
                     }, {
-                        from: 4000,
-                        to: 6000
+                        from: 3500,
+                        to: 5000
                     }, {
-                        from: 6000
+                        from: 5000
                     }]
                 },
 
