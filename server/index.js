@@ -38,7 +38,7 @@ app.use('/welcome', function(req, res, next) {
   next();
 });
 
-var emailArray = ['gmail', 'soton'];
+var emailArray = [];
 
 
 app.get('/send',function(req,res){

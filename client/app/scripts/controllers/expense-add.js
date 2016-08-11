@@ -32,31 +32,33 @@ angular.module('clientApp')
 
     $scope.dataToPost = "";
     $scope.sendmail = function () {
-    $http({
-        // url: "http://localhost:3000/send", 
-        url: "http://crowdslec.herokuapp.com/send",
-        method: "GET",
-        params: {to: $scope.dataToPost}
-      }).success(function(serverResponse) {
-        console.log(serverResponse);
-        $scope.response = serverResponse;
-      }).error(function(serverResponse) {
-        console.log(serverResponse);
-        // $scope.reponse = serverResponse;
-      }).then(function(){
-        console.log($scope.response);
-        var test = _.isEqual($scope.response, "error");
-        console.log(test);
-        if (test === true) {
-          $scope.message = "You may have got a voucher before, or your email address is invalid!";
-        }
-        else {
-          $scope.message = "Send successfully, please check!";
-        }
-        // $scope.message = "Hello World";
-        flash.setMessage($scope.message);
-        $location.path('/expenses');
-      });
+      $timeout(function () {
+        $http({
+          // url: "http://localhost:3000/send", 
+          url: "http://crowdslec.herokuapp.com/send",
+          method: "GET",
+          params: {to: $scope.dataToPost}
+        }).success(function(serverResponse) {
+          console.log(serverResponse);
+          $scope.response = serverResponse;
+        }).error(function(serverResponse) {
+          console.log(serverResponse);
+          // $scope.reponse = serverResponse;
+        }).then(function(){
+          console.log($scope.response);
+          var test = _.isEqual($scope.response, "error");
+          console.log(test);
+          if (test === true) {
+            $scope.message = "You may have got a voucher before, or your email address is invalid!";
+          }
+          else {
+            $scope.message = "Send successfully, please check!";
+          }
+          // $scope.message = "Hello World";
+          flash.setMessage($scope.message);
+          $location.path('/');
+        });
+      }, 1000);
     };
     // console.log($scope.response);
 

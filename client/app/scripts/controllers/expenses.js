@@ -20,7 +20,7 @@
 
 
 angular.module('clientApp')
-  .controller('ExpensesCtrl', function ($scope, Expense) {
+  .controller('ExpensesCtrl', function ($scope, Expense, $timeout) {
   	// $scope.expenses = Expense.getList().$object;
   	// console.log($scope.expenses);
 
@@ -865,7 +865,9 @@ angular.module('clientApp')
     
     // ranking table pagination
     $(document).ready(function() {
-      $('#ranking_table').DataTable();
+      $timeout(function() {
+        $('#ranking_table').DataTable();
+      }, 500);  
     });
     // ranking table ends
 
