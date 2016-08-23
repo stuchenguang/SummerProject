@@ -10,7 +10,7 @@
 angular.module('clientApp')
   .controller('ExpenseAddCtrl', function ($scope, Expense, $location, $http, $timeout, flash) {
     $scope.expense = {};
-    $scope.expense.area = "Anhui";
+    $scope.expense.area = "Beijing";
     $scope.flash = flash;
     $scope.saveExpense = function() {
       var total = parseInt($scope.expense.food) + parseInt($scope.expense.housing) + parseInt($scope.expense.transportation.gas) + 
@@ -26,18 +26,36 @@ angular.module('clientApp')
     // console.log($scope.expense);
 
 
-
-
+      Expense.getList().then(function(data){
+        var a = _.groupBy(data,'area');
+        var area_totalAry = [];
+        // console.log(a[$scope.expense.area]);
+        _.forEach(a[$scope.expense.area], function(n){
+          area_totalAry.push(n.total);   
+        });
+        // console.log(area_totalAry);
+        var index = _.sortedIndex(area_totalAry, total);
+        // console.log(index);
+        var your_area_r = area_totalAry.length + 1 - index;
+        // console.log(your_area_r);
+        var your_area_n = area_totalAry.length + 1;
+        $scope.result = your_area_r + '/' + your_area_n;
+        // console.log($scope.result);
+      });    
     };
 
-    $scope.dataToPost = "";
+
+    $scope.receiver = "";
     $scope.sendmail = function () {
       $timeout(function () {
         $http({
           // url: "http://localhost:3000/send", 
           url: "http://crowdslec.herokuapp.com/send",
           method: "GET",
-          params: {to: $scope.dataToPost}
+          params: {
+                     to: $scope.receiver,
+                     ranking: $scope.result
+                  }
         }).success(function(serverResponse) {
           console.log(serverResponse);
           $scope.response = serverResponse;

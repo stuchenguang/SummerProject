@@ -20,7 +20,7 @@
 
 
 angular.module('clientApp')
-  .controller('ExpensesCtrl', function ($scope, Expense, $timeout) {
+  .controller('ExpensesCtrl', function ($scope, Expense, $timeout, flash, $location) {
   	// $scope.expenses = Expense.getList().$object;
   	// console.log($scope.expenses);
 
@@ -52,6 +52,7 @@ angular.module('clientApp')
       });
       $scope.groupExpenses = a;
       console.log($scope.total);
+      // console.log(a);
       $scope.totalAry = function () {
         var ary = [];
         _.forEach($scope.total, function (val, key) {
@@ -61,6 +62,12 @@ angular.module('clientApp')
       };
       $scope.sorted_totalAry = _.orderBy($scope.totalAry(), ['val'], ['desc']);
 
+
+      $scope.addExpense = function () {
+         $scope.message = "Pay attention: what you fill in here are expenses per month. Please provide real data. Thank you!"
+         flash.setMessage($scope.message);
+         $location.path('/add/expense');
+      };
 
 
       var east_foodAvg = parseInt((a.Jiangsu.foodAvg + a.Zhejiang.foodAvg + a.Anhui.foodAvg + a.Fujian.foodAvg + a.Jiangxi.foodAvg + a.Shandong.foodAvg + a.Shanghai.foodAvg) / 7);
@@ -872,6 +879,10 @@ angular.module('clientApp')
     // ranking table ends
 
 
+    });
+
+    $(document).ready(function() {
+      FB.XFBML.parse();
     });
 
   });     

@@ -7,38 +7,42 @@
 
 <div ng-controller='ExpensesCtrl'>
 
-  <p ng-repeat="expense in expenses |  orderBy: 'area' | filter:query as results"></p>
+  <!-- <p ng-repeat="expense in expenses |  orderBy: 'area' | filter:query as results"></p> -->
   <div class="row" style="margin-top: 40px;">
       <div class="jumbotron" style="background-color:rgba(255,255,255,0.8); border-radius: 3px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); text-align: center;">
-        <h1>CrowdSLEC</h1>
+        <h1 style="font-family: Impact, Charcoal, sans-serif;">CrowdSLEC</h1>
         <p class="lead">
           <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-          <b>{{ results.length }}</b> living expenses records have been provided!
+          <b>{{ expenses.length }}</b> living expenses records have been provided!
         </p>
         <hr style="width: 50%;">
-        <p><a class="btn btn-lg btn-primary" ng-href="#/add/expense">Add your living expenses &nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span></a></p>
+<!--         <p><a class="btn btn-lg btn-primary" ng-href="#/add/expense">Add your living expenses &nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span></a></p> -->
+        <p><a class="btn btn-lg btn-primary" ng-click="addExpense()">Add your living expenses &nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span></a></p>        
 
-        <a href="https://twitter.com/share" class="btn btn-social-icon btn-facebook" style="background-color:#55ACEE; width: 33px;" data-text="Come and check the living expenses ranking of your province/city!&quot;" data-url="http://crowdslec-28096371.netlify.com/#/" data-via="stuartist93" data-hashtags="crowdsourcing" data-show-count="false"><span class="fa fa-twitter fa-lg" style="color:#FFFFFF;"></span></a>&nbsp;&nbsp;<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<!--         <a href="https://twitter.com/share" class="btn btn-social-icon btn-twitter" style="background-color:#55ACEE; width: 33px;" data-text="Come and check the living expenses ranking of your province/city!&quot;" data-url="http://crowdslec-28096371.netlify.com/#/" data-via="stuartist93" data-hashtags="crowdsourcing" data-show-count="false"><span class="fa fa-twitter fa-lg" style="color:#FFFFFF;"></span></a>&nbsp;&nbsp;<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>      
 
-
-        <a class="btn btn-social-icon btn-facebook" style="background-color:#3B5998; width: 33px;" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcrowdslec-28096371.netlify.com%2F%23%2F&amp;src=sdkpreparse"><span class="fa fa-facebook fa-lg" style="color:#FFFFFF; text-align: center;"></span></a>
-
+        <a class="btn btn-social-icon btn-facebook" style="background-color:#3B5998; width: 33px;" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcrowdslec-28096371.netlify.com%2F%23%2F&amp;src=sdkpreparse"><span class="fa fa-facebook fa-lg" style="color:#FFFFFF; text-align: center;"></span></a> -->
+        <div class="col-md-offset-5">
+          <ul class="nav navbar-nav">
+            <li>
+              <div><a href="https://twitter.com/share" class="twitter-share-button" data-text="Come and check the living expenses ranking of your province/city!&quot;" data-via="stuartist93" data-hashtags="crowdsourcing" data-size="small" data-show-count="true">Tweet</a></div>
+            </li>
+              <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <li style="margin-left: 10px;">  
+              <div class="fb-share-button" data-href="http://crowdslec-28096371.netlify.com/#/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcrowdslec-28096371.netlify.com%2F%23%2F&amp;src=sdkpreparse">Share</a></div>   
+            </li>
+          </ul>
+        </div>  
       </div>
   </div>
-
-
-
-
-
-    
 
 
 
   <div class="row" id="area_and_ranking">
     <ng-include src="'views/area-nav.html'"></ng-include>
     <div class="col-md-9" id="ranking" style="padding-left: 20px; background-color: #f2f2f2;">
-      <h3>Ranking</h3>
+      <h3 style="font-family: Impact, Charcoal, sans-serif;">Ranking</h3>
       <table class="table table-striped" id="ranking_table">
         <thead>
           <tr>
@@ -58,18 +62,11 @@
     </div>  
   </div>
 
-
   <div id="mapchart"></div>
   <div id="columnchart"></div>
   <div id="linechart"></div>
   <div id="columndrilldown"></div>
 
-
 </div>
-
-
-
-<div id="fb-root"></div>
-
 
 

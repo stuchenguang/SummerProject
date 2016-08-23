@@ -38,7 +38,19 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <!-- <div class="header"> -->
+    <div id="fb-root"></div>
+    <!-- facebook share popup -->
+    <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=1638623889781663";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+             
+<!--     <div class="header">     
       <div class="navbar navbar-inverse" role="navigation" >
         <div class="col-md-offset-2 col-md-8">
           <div class="navbar-header">
@@ -63,17 +75,29 @@
           </div>
         </div>
       </div>
-    <!-- </div> -->
+    </div> -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="col-md-offset-2 col-md-8">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#/" style="font-family: Impact, Charcoal, sans-serif; font-size: 20px;">CrowdSLEC</a>
+        </div>
+        <ul class="nav navbar-nav" id="nav_element">
+          <li><a href="#/" style="font-family: Impact, Charcoal, sans-serif; font-size: 16px;">Home</a></li>
+          <li><a href="#/expenses" style="font-family: Impact, Charcoal, sans-serif; font-size: 16px;">Expenses</a></li>
+        </ul>
+      </div>
+    </nav>    
 
 
 
     <div style="background-image: url('images/shanghai.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-position: center; ">
     <!-- <div> -->
-    <div class="row" style="margin-top: -20px;">
-      <div class="col-md-offset-2 col-md-8">
-        <div ng-view=""></div>
+      <div class="row" style="margin-top: 50px;">
+        <div class="col-md-offset-2 col-md-8">
+          <div ng-view=""></div>
+        </div>
       </div>
-    </div>
     </div>
 
     <div class="footer">
@@ -92,17 +116,6 @@
 
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
-    </script>
-
-    <!-- facebook share popup -->
-    <script>
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=1638623889781663";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
     </script>
 
 

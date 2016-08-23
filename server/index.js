@@ -38,6 +38,7 @@ app.use('/welcome', function(req, res, next) {
   next();
 });
 
+
 var emailArray = [];
 
 
@@ -65,8 +66,8 @@ app.get('/send',function(req,res){
     var mailOptions={
         to : filterEmail(),
         // to : req.query.to,
-        subject : 'voucher',
-        text : 'Dear participant, thank you for providing data of your living expenses. Your voucher code is: ' + a + ' !'
+        subject : 'voucher and ranking',
+        text : 'Dear participant, thank you for providing data of your living expenses. Your voucher code is: ' + a + '. Your total expenses ranking in your area is ' + req.query.ranking + ' !'
     }
     console.log(mailOptions);
     smtpTransport.sendMail(mailOptions, function(error, response){

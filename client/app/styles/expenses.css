@@ -4,7 +4,7 @@
 }
 
 .panel-title {
-    color: #FFFFFF;    
+    font-family: Impact, Charcoal, sans-serif;    
 }
 
 #area_and_ranking {
@@ -67,4 +67,9 @@
     margin-top: 10em;
     text-align: center;
     color: gray;
+}
+
+#nav_element li:hover {
+    /*background-color: #ff6666;*/
+    border-bottom: 3px solid #ff6666;
 }
