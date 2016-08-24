@@ -13,11 +13,20 @@ var app = express();
 var smtpTransport = nodemailer.createTransport("SMTP",{
     service: "Gmail",
     auth: {
-        user: "stcg216@gmail.com",
-        pass: "930216Kjstcg"
+        // user: "stcg216@gmail.com",
+        // pass: "930216Kjstcg"
+        XOAuth2: {
+            user: "stcg216@gmail.com",
+            clientId: "203272965531-48g4b1d9ha6ea0s6k18p20nlh5qq4k6s.apps.googleusercontent.com",
+            clientSecret: "j_5WavZv9O4hF2w8xrQRIgzI",
+            refreshToken: "1/tlSeLitM2IPsupxOCZWvTZZJb2RUrfD6RF45mCHDDhc",
+            accessToken: "ya29.Ci9JA8KlQ17ml6lY4znPjzhyyWHKFKXzjTCf8WrKsRQUq6QScwczMFo459IEDALzbA"
+            
+        }        
     }
 });
 // SMTP over
+// var smtpTransport = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp.gmail.com');
 
 
 // Add Middleware necessary for REST API's
@@ -42,6 +51,7 @@ app.use('/welcome', function(req, res, next) {
 var emailArray = [];
 
 
+
 app.get('/send',function(req,res){
     var a = Math.random();
     
@@ -64,6 +74,7 @@ app.get('/send',function(req,res){
     
 
     var mailOptions={
+        // from: 'stcg216@gmail.com',
         to : filterEmail(),
         // to : req.query.to,
         subject : 'voucher and ranking',
