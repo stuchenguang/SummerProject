@@ -14,7 +14,7 @@ var smtpTransport = nodemailer.createTransport("SMTP",{
     service: "Gmail",
     auth: {
         // user: "stcg216@gmail.com",
-        // pass: "930216Kjstcg"
+        // pass: "******"
         XOAuth2: {
             user: "stcg216@gmail.com",
             clientId: "203272965531-48g4b1d9ha6ea0s6k18p20nlh5qq4k6s.apps.googleusercontent.com",
